@@ -28,9 +28,23 @@ public class PlayerControls : MonoBehaviour
             rb.AddForce(Vector3.up * jumpPower * rb.mass * rb.gravityScale * 20.0f);
         }
     }
-    void OnCollisionEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.GetComponent<Collision2D>().Tag == "Ground")
+        if(collision.collider.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Ground")
         {
             isGrounded = true;
         }
