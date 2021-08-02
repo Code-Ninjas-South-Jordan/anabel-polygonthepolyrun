@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject gameOverPanel;
     public Text scoreText;
+    //Starting Score
     int score = 0;
 
     public void GameOver()
@@ -19,6 +20,7 @@ public class GameController : MonoBehaviour
 
     public void IncrementScore()
     {
+        //Changes the score by one. 
         score++;
         scoreText.text = score.ToString();
     }

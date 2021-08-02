@@ -20,6 +20,5 @@ public class DestroyAfterTime : MonoBehaviour
     void DestroyObject()
     {
         Destroy(gameObject);
-    
     }
 }

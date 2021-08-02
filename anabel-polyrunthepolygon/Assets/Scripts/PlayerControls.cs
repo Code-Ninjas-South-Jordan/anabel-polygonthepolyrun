@@ -26,6 +26,7 @@ public class PlayerControls : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpPower * rb.mass * rb.gravityScale * 20.0f);
+            isGrounded = false;
         }
         if(transform.position.x < posX)
         {
@@ -36,14 +37,14 @@ public class PlayerControls : MonoBehaviour
     {
         if(collision.collider.tag == "Ground")
         {
-            Destroy(collision.gameObject);
+            isGrounded = true;
         }
         if(collision.collider.tag == "Enemy")
         {
             GameOver();
         }
     }
-    void OnCollisionEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Coin")
         {

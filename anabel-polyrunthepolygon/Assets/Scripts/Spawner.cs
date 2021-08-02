@@ -11,6 +11,9 @@ public class Spawner : MonoBehaviour
     public float spawnDelay = 1f;
     [Header("Default spawn time")]
     public float spawnTime = 2f;
+
+    [SerializeField]
+    private float height;
     void Start()
     {
         InvokeRepeating("InstantiateObjects", spawnDelay, spawnTime);
@@ -19,7 +22,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(15, -2.7f, 0);
+        transform.position = new Vector3(15, height, 0);
     }
     void InstantiateObjects()
     {
