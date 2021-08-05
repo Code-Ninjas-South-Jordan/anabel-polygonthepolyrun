@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerControls : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -19,7 +18,6 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
     void FixedUpdate()
     {
@@ -58,12 +56,18 @@ public class PlayerControls : MonoBehaviour
         {
             isGrounded = true;
         }
+        if(collision.collider.tag == "Enemy") {
+            GameObject.Find("Restarter").GetComponent<Restart>().RestartGame();
+        }
     }
     void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.collider.tag == "Ground")
         {
             isGrounded = true;
+        }
+        if(collision.collider.tag == "Enemy") {
+            GameObject.Find("Restarter").GetComponent<Restart>().RestartGame();
         }
     }
     void GameOver()
