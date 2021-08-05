@@ -24,4 +24,7 @@ public class GameController : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
     }
+    public void Awake() {
+        Time.timeScale = 1;
+    }
 }

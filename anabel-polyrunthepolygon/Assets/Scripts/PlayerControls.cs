@@ -30,7 +30,7 @@ public class PlayerControls : MonoBehaviour
         }
         if(transform.position.x < posX)
         {
-            GameOver();
+            //GameOver();
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
