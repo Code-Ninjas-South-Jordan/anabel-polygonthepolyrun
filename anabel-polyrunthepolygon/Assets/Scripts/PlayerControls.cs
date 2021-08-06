@@ -66,9 +66,6 @@ public class PlayerControls : MonoBehaviour
         {
             isGrounded = true;
         }
-        if(collision.collider.tag == "Enemy") {
-            GameObject.Find("Restarter").GetComponent<Restart>().RestartGame();
-        }
     }
     void GameOver()
     {
