@@ -720,8 +720,9 @@ GameObject:
   - component: {fileID: 618326941333719601}
   - component: {fileID: 769989473982224616}
   - component: {fileID: 8705840083854284743}
+  - component: {fileID: 4235212508024887747}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Terrain Spawner
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -803,6 +804,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4235212508024887747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233080955789836151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e9a8003d0b1934bb71b4f8eaa6b29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  challengeObject: {fileID: 483695405652223584}
+  spawnDelay: 3
+  spawnTime: 2
+  height: 0
 --- !u!1001 &2981899748214483812
 PrefabInstance:
   m_ObjectHideFlags: 0
